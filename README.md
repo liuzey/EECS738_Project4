@@ -18,24 +18,25 @@ pip install -r requirements.txt
 
 ## Usage
 ### Positional & Optional Parameters
-* **-a**: Length of the grid.
-* **-b**: Width of the grid.
-* **-t**: A string of termination states coordinates, e.g. '6532' for two states (6,5) (3,2). Due to the implementation, the coordiante should be less than  10. For coordinates bigger than 10, please modify [here](https://github.com/liuzey/EECS738_Project4/blob/2a882a7c39ec8b418773b8f5cd6b161002c9d32f/main.py#L23) into a list of coordiante in format \[\[x1,y1\],\[x2,y2\],\[x3,y3\]...\].
-* **-s**:
+* **-a**: Length of the grid. Default value is 6.
+* **-b**: Width of the grid. Default value is 5.
+* **-t**: A string of termination states coordinates, e.g. '6532' for two states (6,5) (3,2). Due to the implementation, the coordiante should be less than 10. For coordinates bigger than 10, please modify [here](https://github.com/liuzey/EECS738_Project4/blob/2a882a7c39ec8b418773b8f5cd6b161002c9d32f/main.py#L23) directly into a list of coordiante pairs in format \[\[x1,y1\],\[x2,y2\],\[x3,y3\]...\].
+* **-s**: A string of Starting position of the robot, e.g. '65' for start point at (6,5). Similar as **-t**, for coordinates bigger than 10, please modify [here](https://github.com/liuzey/EECS738_Project4/blob/06cf92b103c795e21c1fb0925556c04a4f60404c/main.py#L22) directly into coordiante pair in format \[x0,y0\].
 
 ### Example
 ```bash
-python main.py 'gtsrb' -s 1 -p 1
+{python main.py -a 10 -b 10 -t 004578616367699397 -s 11} 
 ```
-* 'gtsrb': GTSRB recognition task.
-* -p: Model parameters are pre-trained and loaded.
-* -s: Trained parameters are saved periodically.
+* A grid task of 10\*10.
+* Bot starts in position (1,1).
+* Multiple destinations: (0,0)(4,5)(7,8)(6,1)(6,3)(6,7)(6,9)(9,3)(9,7).
 
 
-## Result Analysis 
+## Results
 
 ## Notes
-* 
+* After reaching each destination, the situation is evaluated again. Thus, the bot makes a optimal set of choices step after step for the current situation. In this way, the final route may not be the globally optimal route.
+* Adding obstacles follows the same logic, but treating obstacle cells as walls. It is easy to implement but comlicated in different parameters in dynamic programming, thus it is not included.
 
 ## Schedule
 - [x] Set up a new git repository in your GitHub account
@@ -47,5 +48,7 @@ python main.py 'gtsrb' -s 1 -p 1
 - [x] Commit your source code, documentation and other supporting files to the git repository in GitHub
 
 ## Reference
-* 
+* EECS 690 Introduction to Machine Learning Course Materials.
+* numpy.arange - Numpy APIs. https://numpy.org/doc/stable/reference/generated/numpy.arange.html
+* matplotlib.pyplot.ion - Matplotlib Documentation. https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.ion.html
 
