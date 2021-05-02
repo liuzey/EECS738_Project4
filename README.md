@@ -1,8 +1,9 @@
 # EECS738_Project4 Treasure Hunters Inc.
-EECS738 Machine Learning course project4. In this project, dynamic programming with different policies is used to solve a GridWorld task. Specifically, two methods are implemented: policy iteration and value iteration. The problem is to let the robot move towards the distination and collect rewards by taking moves in the square grids. Every move indicates a reward varying in actions, and the route is along with accumulative rewards. So the action is taken by assessing the current situation and make optimal choices. Underlying principles of dynamic programming is Markov Decision Process (MDP).
+EECS738 Machine Learning course project4. In this project, dynamic programming with different policies is used to solve a GridWorld task. Specifically, two methods are implemented: policy iteration and value iteration. The problem is to let the robot move towards the distination and collect rewards by taking moves in the square grids. Every move indicates a reward varying in actions, and the route is along with accumulative rewards. So the action is taken by assessing the current situation and make optimal choices based on learned policy. Underlying principles of dynamic programming is Markov Decision Process (MDP).
 
 ## Ideas and Thinking
-* 
+* Reinforcement learning is different from supervised or unsupervised learning. It never tells us what to do, but reflects on how well we did in the past. The aim of reinforcement learning is help the agent make decisions following certain policies, often quantitively expressed as objective functions.
+* To solve a route for bots in grids, the objective is neither given nor plaintext. One way is to take **actions** to transfer between cells as **states** in trials and record the **rewards** (or penalty equally) it has received. After making a lot of trials, each cell is given a criterion to evaluate 'its influence on rewards'. By taking actions regarding the highest values each time, it forms the policy for the bot to choose an optimal route.
 
 ## Setup
 ### Environment
@@ -35,6 +36,7 @@ python main.py vi -a 10 -b 10 -t 004578616367699397 -s 11
 
 
 ## Results
+* The bots starts at (1,1) every time.
 * If the bot move into wall (boundary), it stays still.
 * For every possible move or stay still, the reward is -1. For reaching destination, the reward is 0.
 * For MDP, conditional probability of moving in each direction based on current state and action is equal, that is, 0.25.
