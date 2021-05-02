@@ -26,7 +26,7 @@ pip install -r requirements.txt
 
 ### Example
 ```bash
-{python main.py vi -a 10 -b 10 -t 004578616367699397 -s 11} 
+python main.py vi -a 10 -b 10 -t 004578616367699397 -s 11
 ```
 * Value iteration.
 * A grid task of 10\*10.
