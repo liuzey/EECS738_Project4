@@ -21,8 +21,8 @@ pip install -r requirements.txt
 * **method**: Methods of updating. 'pi' for policy iteration, and 'vi' for value iteration. Default method is policy iteration.
 * **-a**: Length of the grid. Default value is 6.
 * **-b**: Width of the grid. Default value is 5.
-* **-t**: A string of termination states coordinates, e.g. '6532' for two states (6,5) (3,2). Due to the implementation, the coordiante should be less than 10. For coordinates bigger than 10, please modify [here](https://github.com/liuzey/EECS738_Project4/blob/2a882a7c39ec8b418773b8f5cd6b161002c9d32f/main.py#L23) directly into a list of coordiante pairs in format \[\[x1,y1\],\[x2,y2\],\[x3,y3\]...\].
-* **-s**: A string of Starting position of the robot, e.g. '65' for start point at (6,5). Similar as **-t**, for coordinates bigger than 10, please modify [here](https://github.com/liuzey/EECS738_Project4/blob/06cf92b103c795e21c1fb0925556c04a4f60404c/main.py#L22) directly into coordiante pair in format \[x0,y0\].
+* **-t**: A string of termination states coordinates, e.g. '6532' for two states (6,5) (3,2). Due to the implementation, the coordiante should be less than 10. For coordinates bigger than 10, please modify [here](https://github.com/liuzey/EECS738_Project4/blob/cc899ac2a5f72eb0653a270d5d884862d297d031/main.py#L24) directly into a list of coordiante pairs in format \[\[x1,y1\],\[x2,y2\],\[x3,y3\]...\].
+* **-s**: A string of Starting position of the robot, e.g. '65' for start point at (6,5). Similar as **-t**, for coordinates bigger than 10, please modify [here](https://github.com/liuzey/EECS738_Project4/blob/cc899ac2a5f72eb0653a270d5d884862d297d031/main.py#L23) directly into coordiante pair in format \[x0,y0\].
 
 ### Example
 ```bash
@@ -35,8 +35,13 @@ python main.py vi -a 10 -b 10 -t 004578616367699397 -s 11
 
 
 ## Results
+### Policy Iteration
 
-![](https://github.com/liuzey/EECS738_Project4/blob/main/pics/all.gif)
+![](https://github.com/liuzey/EECS738_Project4/blob/main/pic_pi/all.gif)
+
+### Value Iteration
+
+![](https://github.com/liuzey/EECS738_Project4/blob/main/pic_vi/all.gif)
 
 ## Notes
 * After reaching each destination, the situation is evaluated again. Thus, the bot makes a optimal set of choices step after step for the current situation. In this way, the final route may not be the globally optimal route.
