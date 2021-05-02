@@ -1,5 +1,5 @@
 # EECS738_Project4 Treasure Hunters Inc.
-EECS738 Machine Learning course project4. In this project, dynamic programming with different policies is used to solve a GridWorld task. Specifically, two policies are implemented: policy iteration and value iteration. The problem is to let the robot move towards the distination and collect rewards by taking moves in the square grids. Every move indicates an reduced rewards, varying in actions. So the action is taken by assessing the current situation and make optimal choices. Underlying principles of dynamic programming is Markov Decision Process (MDP).
+EECS738 Machine Learning course project4. In this project, dynamic programming with different policies is used to solve a GridWorld task. Specifically, two policies are implemented: policy iteration and value iteration. The problem is to let the robot move towards the distination and collect rewards by taking moves in the square grids. Every move indicates a reward varying in actions, and the route is along with accumulative rewards. So the action is taken by assessing the current situation and make optimal choices. Underlying principles of dynamic programming is Markov Decision Process (MDP).
 
 ## Ideas and Thinking
 * 
@@ -18,9 +18,10 @@ pip install -r requirements.txt
 
 ## Usage
 ### Positional & Optional Parameters
-* **data**: Dataset name (task) to choose from 'mnist' and 'gtsrb'.
-* **-p**: Whether to load pre-trained model parameters. The parameters for MNIST model is saved in ['./paras'](https://github.com/liuzey/EECS738_Project3/tree/main/paras). The parameters for GTSRB model is saved in ['./paras_save'](https://github.com/liuzey/EECS738_Project3/tree/main/paras_save). (Default: False).
-* **-s**: Whether to save the trained model parameters (Default: False).
+* **-a**: Length of the grid.
+* **-b**: Width of the grid.
+* **-t**: A string of termination states coordinates, e.g. '6532' for two states (6,5) (3,2). Due to the implementation, the coordiante should be less than  10. For coordinates bigger than 10, please modify [here](https://github.com/liuzey/EECS738_Project4/blob/2a882a7c39ec8b418773b8f5cd6b161002c9d32f/main.py#L23) into a list of coordiante in format \[\[x1,y1\],\[x2,y2\],\[x3,y3\]...\].
+* **-s**:
 
 ### Example
 ```bash
