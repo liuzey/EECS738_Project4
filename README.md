@@ -29,10 +29,12 @@ pip install -r requirements.txt
 ```
 * A grid task of 10\*10.
 * Bot starts in position (1,1).
-* Multiple destinations: (0,0)(4,5)(7,8)(6,1)(6,3)(6,7)(6,9)(9,3)(9,7).
+* Multiple destinations: (0,0) (4,5) (7,8) (6,1) (6,3) (6,7) (6,9) (9,3) (9,7).
 
 
 ## Results
+
+![](https://github.com/liuzey/EECS738_Project4/blob/main/pics/all.gif)
 
 ## Notes
 * After reaching each destination, the situation is evaluated again. Thus, the bot makes a optimal set of choices step after step for the current situation. In this way, the final route may not be the globally optimal route.
