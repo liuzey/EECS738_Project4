@@ -41,6 +41,7 @@ python main.py vi -a 10 -b 10 -t 004578616367699397 -s 11
 * For previous possible rewards, it is decayed by 30% ,that is gamma=0.7.
 
 ### Policy Iteration
+* The values of each cell is based on the conditional expectations of rewards based on current situation and decayed expectations of possible previous values.
 * The training process converges when the parameter change between two iterations is smaller than 0.01.
 * Final route is \[1, 1] -> \[1, 0] -> \[0, 0] -> \[1, 0] -> \[2, 0] -> \[3, 0] -> \[4, 0] -> \[5, 0] -> \[6, 0] -> \[6, 1] -> \[6, 2] -> \[6, 3] -> \[7, 3] -> \[8, 3] -> \[9, 3] -> \[9, 4] -> \[9, 5] -> \[9, 6] -> \[9, 7] -> \[8, 7] -> \[7, 7] -> \[6, 7] -> \[6, 8] -> \[7, 8] -> \[7, 9] -> \[6, 9] -> \[6, 8] -> \[6, 7] -> \[5, 7] -> \[5, 6] -> \[4, 6] -> \[4, 5]
 
@@ -48,6 +49,7 @@ python main.py vi -a 10 -b 10 -t 004578616367699397 -s 11
 ![](https://github.com/liuzey/EECS738_Project4/blob/main/pic_pi/all.gif)
 
 ### Value Iteration
+* The values of each cell is the reward plus maximum decayed previous possible values.
 * The training process converges when the parameter don't cahnge any longer between two iterations.
 * Final route is \[1, 1\] -> \[0, 1\] -> \[0, 0\] -> \[1, 0\] -> \[2, 0\] -> \[3, 0\] -> \[4, 0\] -> \[5, 0\] -> \[6, 0\] -> \[6, 1\] -> \[6, 2\] -> \[6, 3\] -> \[7, 3\] -> \[8, 3\] -> \[9, 3\] -> \[9, 4\] -> \[9, 5\] -> \[9, 6\] -> \[9, 7\] -> \[8, 7\] -> \[7, 7\] -> \[6, 7\] -> \[7, 7\] -> \[7, 8\] -> \[6, 8\] -> \[6, 9\] -> \[5, 9\] -> \[4, 9\] -> \[4, 8\] -> \[4, 7\] -> \[4, 6\] -> \[4, 5\]
 
