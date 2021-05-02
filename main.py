@@ -1,3 +1,9 @@
+# This is for Project4 - Treasure Hunters Inc. in course EECS738 Machine Learning.
+# Written by Zeyan Liu (StudentID: 3001190).
+# Run command example:
+# {python main.py -a 10 -b 10 -t 004578616367699397 -s 11} for performing learning on a grid of 10*10, 
+# with bots starting in (1,1) and multiple destinations: (0,0)(4,5)(7,8)(6,1)(6,3)(6,7)(6,9)(9,3)(9,7).
+
 import numpy as np
 import argparse
 from algorithm import DP
