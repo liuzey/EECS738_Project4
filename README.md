@@ -1,5 +1,5 @@
 # EECS738_Project4 Treasure Hunters Inc.
-EECS738 Machine Learning course project4. In this project, dynamic programming with different policies is used to solve a GridWorld task. Specifically, two policies are implemented: policy iteration and value iteration. The problem is to let the robot move towards the distination and collect rewards by taking moves in the square grids. Every move indicates a reward varying in actions, and the route is along with accumulative rewards. So the action is taken by assessing the current situation and make optimal choices. Underlying principles of dynamic programming is Markov Decision Process (MDP).
+EECS738 Machine Learning course project4. In this project, dynamic programming with different policies is used to solve a GridWorld task. Specifically, two methods are implemented: policy iteration and value iteration. The problem is to let the robot move towards the distination and collect rewards by taking moves in the square grids. Every move indicates a reward varying in actions, and the route is along with accumulative rewards. So the action is taken by assessing the current situation and make optimal choices. Underlying principles of dynamic programming is Markov Decision Process (MDP).
 
 ## Ideas and Thinking
 * 
@@ -18,6 +18,7 @@ pip install -r requirements.txt
 
 ## Usage
 ### Positional & Optional Parameters
+* **method**: Methods of updating. 'pi' for policy iteration, and 'vi' for value iteration. Default method is policy iteration.
 * **-a**: Length of the grid. Default value is 6.
 * **-b**: Width of the grid. Default value is 5.
 * **-t**: A string of termination states coordinates, e.g. '6532' for two states (6,5) (3,2). Due to the implementation, the coordiante should be less than 10. For coordinates bigger than 10, please modify [here](https://github.com/liuzey/EECS738_Project4/blob/2a882a7c39ec8b418773b8f5cd6b161002c9d32f/main.py#L23) directly into a list of coordiante pairs in format \[\[x1,y1\],\[x2,y2\],\[x3,y3\]...\].
@@ -25,8 +26,9 @@ pip install -r requirements.txt
 
 ### Example
 ```bash
-{python main.py -a 10 -b 10 -t 004578616367699397 -s 11} 
+{python main.py vi -a 10 -b 10 -t 004578616367699397 -s 11} 
 ```
+* Value iteration.
 * A grid task of 10\*10.
 * Bot starts in position (1,1).
 * Multiple destinations: (0,0) (4,5) (7,8) (6,1) (6,3) (6,7) (6,9) (9,3) (9,7).
