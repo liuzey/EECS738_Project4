@@ -44,6 +44,7 @@ python main.py vi -a 10 -b 10 -t 004578616367699397 -s 11
 ![](https://github.com/liuzey/EECS738_Project4/blob/main/pic_vi/all.gif)
 
 ## Notes
+* Traing records are saved in [./records](https://github.com/liuzey/EECS738_Project4/tree/main/records). Policy iteration is [here](https://github.com/liuzey/EECS738_Project4/blob/main/records/train_pi.log). Value iteration is [here](https://github.com/liuzey/EECS738_Project4/blob/main/records/train_vi.log).
 * After reaching each destination, the situation is evaluated again. Thus, the bot makes a optimal set of choices step after step for the current situation. In this way, the final route may not be the globally optimal route.
 * Adding obstacles follows the same logic, but treating obstacle cells as walls. It is easy to implement but comlicated in different parameters in dynamic programming, thus it is not included.
 
