@@ -1,5 +1,5 @@
 # EECS738_Project4 Treasure Hunters Inc.
-EECS738 Machine Learning course project4. 
+EECS738 Machine Learning course project4. In this project, dynamic programming with different policies is used to solve a GridWorld task. Specifically, two policies are implemented: policy iteration and value iteration. The problem is to let the robot move towards the distination and collect rewards by taking moves in the square grids. Every move indicates an reduced rewards, varying in actions. So the action is taken by assessing the current situation and make optimal choices. Underlying principles of dynamic programming is Markov Decision Process (MDP).
 
 ## Ideas and Thinking
 * 
@@ -38,10 +38,10 @@ python main.py 'gtsrb' -s 1 -p 1
 
 ## Schedule
 - [x] Set up a new git repository in your GitHub account
-- [x] Pick two datasets from https://en.wikipedia.org/wiki/List_of_datasets_for_machine-learning_research
+- [x] Think up a map-like environment with treasure, obstacles and opponents
 - [x] Choose a programming language (Python, C/C++, Java) **Python**
-- [x] Formulate ideas on how neural networks can be used to accomplish the task for the specific dataset
-- [x] Build a neural network to model the prediction process programmatically
+- [x] Formulate ideas on how reinforcement learning can be used to find treasure efficiently while avoiding obstacles and opponents
+- [x] Build one or more reinforcement policies to model situational assessments, actions and rewards programmatically
 - [x] Document your process and results
 - [x] Commit your source code, documentation and other supporting files to the git repository in GitHub
 
